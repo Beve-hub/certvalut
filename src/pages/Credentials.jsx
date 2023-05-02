@@ -4,6 +4,7 @@ import {FaRegFilePdf} from 'react-icons/fa'
 import {RiDeleteBinLine} from 'react-icons/ri'
 import {AiOutlineMail, AiOutlineDownload} from 'react-icons/ai'
 import Modal from './modal/Modal'
+import { Outlet } from 'react-router-dom';
 
 
 
@@ -45,13 +46,11 @@ const Credentials = () => {
             <AiOutlineDownload size={15}/>Export
           </button>
         </div>
-        <div className='w-[600px] text-center mt-[10rem] ml-[20rem] border-dashed border-2 border-sky-500 rounded-lg '>
-          <h1 className='font-bold p-4 text-lg' >Upload a spreadsheet with recipients’ data from your computer</h1>
-          <p className='text-gray-500 pb-6'>We accept most spreadsheet formats, i. e. : CSV, XLSX, and XLS</p>
-            <button className='flex items-center text-lg text-blue-700 gap-2 border-dashed border-t-2 border-sky-500 w-full justify-center p-6'>
-              <AiOutlineDownload size={20}/> Upload list sheet
-            </button>
+        <div className='w-[600px] text-center mt-[10rem] ml-[20rem] '>
+          <h1 className='font-bold p-4 text-lg' >You haven’t issued any certificates  yet</h1>
+          <p className='font-normal, p-2' >This section is dedicated to the management of the credentials (certificates and badges) you issued. Here you can download, resend, delete, and edit issued credentials.</p>
          </div>
+         <Outlet/>
       </div>
 
       

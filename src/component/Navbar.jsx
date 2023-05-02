@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Logo from '../images/logo.png';
 import { links } from '../data';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import { RiArrowDropUpLine, RiArrowDropDownLine } from 'react-icons/ri';
 import ICON1 from '../images/metamask-icon.png';
 import ICON2 from '../images/coinbase-logo 1.png';
@@ -83,8 +83,8 @@ const Navbar = () => {
             );
           })}
          </ul>
-        
       </div>
+      <Outlet/>
     </div>
   );
 };
